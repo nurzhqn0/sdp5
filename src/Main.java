@@ -37,7 +37,7 @@ public class Main {
         coffeeShop.placeOrder("Uali", order4, Payment.CREDIT_CARD);
 
         Beverage order5 = new Espresso(Size.LARGE);
-        order5 = new MilkDecorator(order4);
+        order5 = new MilkDecorator(order5);
         coffeeShop.placeOrder("Miras", order5, Payment.KASPI_QR);
 
         coffeeShop.displayDailySummary();
