@@ -13,20 +13,20 @@ public class Main {
 
         // espresso
         Beverage order1 = new Espresso(Size.MEDIUM);
-        coffeeShop.placeOrder("Alice Johnson", order1, Payment.APPLE_PAY);
+        coffeeShop.placeOrder("Ali", order1, Payment.APPLE_PAY);
 
         // latte with milk and sugar
         Beverage order2 = new Latte(Size.LARGE);
         order2 = new MilkDecorator(order2);
         order2 = new SugarDecorator(order2);
-        coffeeShop.placeOrder("Bob Smith", order2, Payment.KASPI_QR);
+        coffeeShop.placeOrder("Bibarys", order2, Payment.KASPI_QR);
 
         // cappuccino with servings
         Beverage order3 = new Cappuccino(Size.MEDIUM);
         order3 = new WhippedCreamDecorator(order3);
         order3 = new CaramelDecorator(order3);
         order3 = new SugarDecorator(order3);
-        coffeeShop.placeOrder("Charlie Brown", order3, Payment.HALYK_QR);
+        coffeeShop.placeOrder("Zhanibek", order3, Payment.HALYK_QR);
 
         // fully served espresso
         Beverage order4 = new Espresso(Size.SMALL);
@@ -34,7 +34,11 @@ public class Main {
         order4 = new SugarDecorator(order4);
         order4 = new WhippedCreamDecorator(order4);
         order4 = new CaramelDecorator(order4);
-        coffeeShop.placeOrder("Diana Prince", order4, Payment.CREDIT_CARD);
+        coffeeShop.placeOrder("Uali", order4, Payment.CREDIT_CARD);
+
+        Beverage order5 = new Espresso(Size.LARGE);
+        order5 = new MilkDecorator(order4);
+        coffeeShop.placeOrder("Miras", order5, Payment.KASPI_QR);
 
         coffeeShop.displayDailySummary();
     }
