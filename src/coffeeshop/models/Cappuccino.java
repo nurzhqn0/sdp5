@@ -1,0 +1,40 @@
+package coffeeshop.models;
+
+import coffeeshop.enums.Size;
+import coffeeshop.models.interfaces.Beverage;
+
+public class Cappuccino implements Beverage {
+    private final Size size;
+    private final double baseCost;
+    private final int baseCalories;
+
+    public Cappuccino(Size size) {
+        this.size = size;
+        this.baseCost = 3.00;
+        this.baseCalories = 80;
+    }
+
+    @Override
+    public String getDescription() {
+        return size + " Cappuccino";
+    }
+
+    @Override
+    public double getCost() {
+        return baseCost * getSizeMultiplier();
+    }
+
+    @Override
+    public int getCalories() {
+        return (int)(baseCalories * getSizeMultiplier());
+    }
+
+    private double getSizeMultiplier() {
+        switch(size) {
+            case SMALL: return 0.8;
+            case LARGE: return 1.2;
+            case MEDIUM: return 1.0;
+            default: return 0.0;
+        }
+    }
+}
