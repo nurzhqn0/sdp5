@@ -2,7 +2,7 @@ package coffeeshop.subsystems;
 
 public class NotificationSystem {
     public void sendOrderConfirmation(String customerName, String orderDetails) {
-        System.out.println("Email sent to " + customerName);
+        System.out.println("Message sent to " + customerName);
         System.out.println("Order confirmed: " + orderDetails);
     }
 

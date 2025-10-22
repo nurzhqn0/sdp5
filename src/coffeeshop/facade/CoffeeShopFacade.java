@@ -51,7 +51,7 @@ public class CoffeeShopFacade {
         System.out.println("Order #: " + orderNum);
         System.out.println("Customer: " + customer);
         System.out.println("Item: " + beverage.getDescription());
-        System.out.println("Cost: $" + String.format("%.2f", beverage.getCost()));
+        System.out.println("Cost: KZT" + String.format("%.2f", beverage.getCost()));
         System.out.println("Calories: " + beverage.getCalories() + " kcal");
         System.out.println("-".repeat(40) + "\n");
     }
