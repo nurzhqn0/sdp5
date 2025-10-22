@@ -34,7 +34,7 @@ public class Espresso implements Beverage {
             case SMALL: return 0.8;
             case LARGE: return 1.2;
             case MEDIUM: return 1.0;
-            default: return 0.0;
+            default: throw new IllegalArgumentException("Invalid size");
         }
     }
 }
